@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "d2b44c1f-5126-4cad-b110-eff45b27ff5e",
+		"name": "Pokemon Nest Mongo Fastify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5332893"
+	},
+	"item": [
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "Update pokemon by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pokedexNumber\": 4,\r\n    \"name\": \"Charmander\",\r\n    \"level\": 12,\r\n    \"elements\": [\"fire\"],\r\n    \"imageUrl\": \"https://grid-paint.com/images/png/5140531441041408.png\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/pokemon/63477b35b75a5f57e9dfaa39",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								"63477b35b75a5f57e9dfaa39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a pokemon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pokedexNumber\": 9,\r\n    \"name\": \"Blastoise\",\r\n    \"level\": 35,\r\n    \"experience\": 35200,\r\n    \"elements\": [\r\n        \"Water\"\r\n    ],\r\n    \"minimumLevelToEvolve\": 100,\r\n    \"inWhoEvolve\": \"None\",\r\n    \"imageUrl\": \"https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/pokemon/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								"create"
+							]
+						},
+						"description": "Create a Pokemon"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all pokemons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/pokemon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon"
+							]
+						},
+						"description": "Get a list of all pokemons"
+					},
+					"response": []
+				},
+				{
+					"name": "Get pokemon by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/pokemon/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete pokemon by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/pokemon/delete?id=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trainers",
+			"item": [
+				{
+					"name": "Interactions with pokemons",
+					"item": [
+						{
+							"name": "Get all pokemons by trainer ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/trainer/634823c438a7a3cf13c18d74/pokemon",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"trainer",
+										"634823c438a7a3cf13c18d74",
+										"pokemon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Try catch random pokemon",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/trainer/634823c438a7a3cf13c18d74/pokemon/random",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"trainer",
+										"634823c438a7a3cf13c18d74",
+										"pokemon",
+										"random"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Release a pokemon",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/trainer/634823c438a7a3cf13c18d74/pokemon/63477b35b75a5f57e9dfaa39",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"trainer",
+										"634823c438a7a3cf13c18d74",
+										"pokemon",
+										"63477b35b75a5f57e9dfaa39"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Try catch a specific pokemon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/trainer/634823c438a7a3cf13c18d74/pokemon/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"trainer",
+										"634823c438a7a3cf13c18d74",
+										"pokemon",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update trainer by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"medals\": 0,\r\n    \"pokemons\": [\r\n        {\r\n            \"pokedexNumber\": 4,\r\n            \"name\": \"Charmander\",\r\n            \"level\": 12,\r\n            \"elements\": [\r\n                \"fire\"\r\n            ],\r\n            \"imageUrl\": \"https://grid-paint.com/images/png/5140531441041408.png\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/trainer/63477b35b75a5f57e9dfaa39",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trainer",
+								"63477b35b75a5f57e9dfaa39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a trainer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"medals\": 0,\r\n    \"pokeballs\": 10,\r\n    \"pokemons\": []\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/trainer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trainer",
+								"create"
+							]
+						},
+						"description": "Create a Pokemon"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all trainers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/trainer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trainer"
+							]
+						},
+						"description": "Get a list of all pokemons"
+					},
+					"response": []
+				},
+				{
+					"name": "Get trainer by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/trainer/63486fd3420e9f933da67fcf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trainer",
+								"63486fd3420e9f933da67fcf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete trainer by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/trainer/delete?id=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trainer",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

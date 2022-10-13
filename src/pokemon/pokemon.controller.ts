@@ -17,7 +17,6 @@ import { PokemonService } from "./pokemon.service";
  
 @Controller('pokemon')
 export class PokemonController {
-
     constructor(private pokemonService: PokemonService) {}
     
     @Post('/create')

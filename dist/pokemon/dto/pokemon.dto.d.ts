@@ -1,7 +1,11 @@
 export declare class CreatePokemonDTO {
+    readonly pokedexNumber: number;
     readonly name: string;
-    readonly level: number;
+    level: number;
+    experience: number;
     readonly elements: Array<string>;
+    readonly minimumLevelToEvolve: number;
+    readonly inWhoEvolve: string;
     readonly imageUrl: string;
     readonly createdAt: Date;
 }

@@ -1,0 +1,159 @@
+[{
+  "_id": {
+    "$oid": "6348716761a0cb4d7ca04117"
+  },
+  "name": "Annie",
+  "medals": 0,
+  "pokeballs": 10,
+  "pokemons": [
+    {
+      "_id": {
+        "$oid": "63486e03ce6ba3357788df6d"
+      },
+      "pokedexNumber": 8,
+      "name": "Wartortle",
+      "level": 22,
+      "experience": 22000,
+      "elements": [
+        "Water"
+      ],
+      "minimumLevelToEvolve": 32,
+      "inWhoEvolve": "Blastoise",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1665691139274"
+        }
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "63486d4ece6ba3357788df67"
+      },
+      "pokedexNumber": 5,
+      "name": "Charmeleon",
+      "level": 13,
+      "experience": 13000,
+      "elements": [
+        "Fire"
+      ],
+      "minimumLevelToEvolve": 30,
+      "inWhoEvolve": "Charizard",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png",
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1665690958920"
+        }
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "63486b818780cdcd0d324a22"
+      },
+      "pokedexNumber": 1,
+      "name": "Bulbasaur",
+      "level": 1,
+      "experience": 0,
+      "elements": [
+        "Plant",
+        "Poison"
+      ],
+      "minimumLevelToEvolve": 12,
+      "inWhoEvolve": "Ivysaur",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1665690497114"
+        }
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "63486c8fce6ba3357788df60"
+      },
+      "pokedexNumber": 3,
+      "name": "Venusaur",
+      "level": 33,
+      "experience": 33400,
+      "elements": [
+        "Plant",
+        "Poison"
+      ],
+      "minimumLevelToEvolve": 100,
+      "inWhoEvolve": "None",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1665690767097"
+        }
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "63486e22ce6ba3357788df6f"
+      },
+      "pokedexNumber": 9,
+      "name": "Blastoise",
+      "level": 35,
+      "experience": 35200,
+      "elements": [
+        "Water"
+      ],
+      "minimumLevelToEvolve": 100,
+      "inWhoEvolve": "None",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1665691170762"
+        }
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "63486c8fce6ba3357788df60"
+      },
+      "pokedexNumber": 3,
+      "name": "Venusaur",
+      "level": 33,
+      "experience": 33400,
+      "elements": [
+        "Plant",
+        "Poison"
+      ],
+      "minimumLevelToEvolve": 100,
+      "inWhoEvolve": "None",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1665690767097"
+        }
+      },
+      "__v": 0
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665692007768"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "634872a161a0cb4d7ca04256"
+  },
+  "name": "Nicolas",
+  "medals": 0,
+  "pokeballs": 10,
+  "pokemons": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665692321949"
+    }
+  },
+  "__v": 0
+}]

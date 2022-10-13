@@ -23,14 +23,10 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import { Schema } from "mongoose";
-export declare const PokemonSchema: Schema<any, import("mongoose").Model<any, any, any, any, any>, {}, {}, {}, {}, "type", {
-    pokedexNumber: number;
+export declare const TrainerSchema: Schema<any, import("mongoose").Model<any, any, any, any, any>, {}, {}, {}, {}, "type", {
     name: string;
-    level: number;
-    experience: number;
-    elements: any[];
-    minimumLevelToEvolve: number;
-    inWhoEvolve: string;
-    imageUrl: string;
+    pokeballs: number;
+    pokemons: any[];
     createdAt: Date;
+    medals?: number;
 }>;

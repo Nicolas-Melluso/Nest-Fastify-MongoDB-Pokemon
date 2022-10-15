@@ -24,9 +24,9 @@
 /// <reference types="mongoose/types/inferschematype" />
 import { Schema } from "mongoose";
 export declare const TrainerSchema: Schema<any, import("mongoose").Model<any, any, any, any, any>, {}, {}, {}, {}, "type", {
-    name: string;
-    pokeballs: number;
     pokemons: any[];
+    name: string;
     createdAt: Date;
+    pokeballs: number;
     medals?: number;
 }>;

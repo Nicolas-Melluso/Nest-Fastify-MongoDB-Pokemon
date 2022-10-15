@@ -28,9 +28,8 @@ export declare const PokemonSchema: Schema<any, import("mongoose").Model<any, an
     name: string;
     level: number;
     experience: number;
+    gender: string;
     elements: any[];
-    minimumLevelToEvolve: number;
-    inWhoEvolve: string;
     imageUrl: string;
     createdAt: Date;
 }>;

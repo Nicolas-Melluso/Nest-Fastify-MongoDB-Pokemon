@@ -38,11 +38,16 @@ export class PokemonController {
 
     @Get('/:id')
     async getPokemonById(@Res() res: FastifyReply, @Param('id') pokemonID) {
-        const pokemon = await this.pokemonService.getPokemon(pokemonID);
-        if(!pokemon) throw new NotFoundException('The pokemon does not exist yet, try in the next generation');
-        res.status(HttpStatus.OK).send({
-            message: `This is your pokemon with the ID ${ pokemonID }`,
-            pokemon,
+        if (pokemonID.match(/^[0-9a-fA-F]{24}$/)) {
+            const pokemon = await this.pokemonService.getPokemon(pokemonID);
+            if(!pokemon) throw new NotFoundException('The pokemon does not exist yet, try in the next generation');
+            res.status(HttpStatus.OK).send({
+                message: `This is your pokemon with the ID ${ pokemonID }`,
+                pokemon,
+            });
+        }
+        res.status(HttpStatus.NOT_ACCEPTABLE).send({
+            message: `The ID ${ pokemonID } must be an legal ID `,
         });
     }
 
@@ -63,6 +68,15 @@ export class PokemonController {
         res.status(HttpStatus.OK).send({
             message: `This is your new pokemon with the ID ${ pokemonID }`,
             pokemon,
+        });
+    }
+
+    @Post('/generate/all')
+    async generatePokemons(@Res() res: FastifyReply) {
+        await this.pokemonService.generateAllPokemons();
+
+        res.status(HttpStatus.OK).send({
+            message: `This was the all pokemon that were created`,
         });
     }
 }

@@ -16,6 +16,8 @@ exports.PokemonService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
+const pokemon_list_1 = require("./pokemon-list");
+const helper_1 = require("../helper/helper");
 let PokemonService = class PokemonService {
     constructor(pokemonModel) {
         this.pokemonModel = pokemonModel;
@@ -39,6 +41,24 @@ let PokemonService = class PokemonService {
     async updatePokemon(pokemonID, createPokemonDTO) {
         const updatedPokemon = await this.pokemonModel.findByIdAndUpdate(pokemonID, createPokemonDTO, { new: true });
         return updatedPokemon;
+    }
+    async generateAllPokemons() {
+        pokemon_list_1.allPokemon.map(async (pokemon) => {
+            let pokemonLevel = await (0, helper_1.randomValue)(pokemon.levelRate[0], pokemon.levelRate[1]);
+            let experienceLevel = (pokemonLevel * 1000) + await (0, helper_1.randomValue)(0, 999);
+            let gender = await (0, helper_1.randomValue)(0, 1);
+            let createPokemonDTO = {
+                pokedexNumber: pokemon.pokedexId,
+                name: pokemon.name,
+                level: pokemonLevel,
+                experience: experienceLevel,
+                gender: gender ? "Male" : "Female",
+                elements: pokemon.elements,
+                imageUrl: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.pokedexId < 100 ? pokemon.pokedexId < 10 ? '00' + pokemon.pokedexId : '0' + pokemon.pokedexId : pokemon.pokedexId}.png`
+            };
+            const newPokemon = await new this.pokemonModel(createPokemonDTO);
+            return await newPokemon.save();
+        });
     }
 };
 PokemonService = __decorate([

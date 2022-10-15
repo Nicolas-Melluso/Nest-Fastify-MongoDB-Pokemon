@@ -34,12 +34,17 @@ let PokemonController = class PokemonController {
         });
     }
     async getPokemonById(res, pokemonID) {
-        const pokemon = await this.pokemonService.getPokemon(pokemonID);
-        if (!pokemon)
-            throw new common_1.NotFoundException('The pokemon does not exist yet, try in the next generation');
-        res.status(common_1.HttpStatus.OK).send({
-            message: `This is your pokemon with the ID ${pokemonID}`,
-            pokemon,
+        if (pokemonID.match(/^[0-9a-fA-F]{24}$/)) {
+            const pokemon = await this.pokemonService.getPokemon(pokemonID);
+            if (!pokemon)
+                throw new common_1.NotFoundException('The pokemon does not exist yet, try in the next generation');
+            res.status(common_1.HttpStatus.OK).send({
+                message: `This is your pokemon with the ID ${pokemonID}`,
+                pokemon,
+            });
+        }
+        res.status(common_1.HttpStatus.NOT_ACCEPTABLE).send({
+            message: `The ID ${pokemonID} must be an legal ID `,
         });
     }
     async deletePokemon(res, pokemonID) {
@@ -58,6 +63,12 @@ let PokemonController = class PokemonController {
         res.status(common_1.HttpStatus.OK).send({
             message: `This is your new pokemon with the ID ${pokemonID}`,
             pokemon,
+        });
+    }
+    async generatePokemons(res) {
+        await this.pokemonService.generateAllPokemons();
+        res.status(common_1.HttpStatus.OK).send({
+            message: `This was the all pokemon that were created`,
         });
     }
 };
@@ -101,6 +112,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, pokemon_dto_1.CreatePokemonDTO, Object]),
     __metadata("design:returntype", Promise)
 ], PokemonController.prototype, "updatePokemon", null);
+__decorate([
+    (0, common_1.Post)('/generate/all'),
+    __param(0, (0, common_1.Res)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], PokemonController.prototype, "generatePokemons", null);
 PokemonController = __decorate([
     (0, common_1.Controller)('pokemon'),
     __metadata("design:paramtypes", [pokemon_service_1.PokemonService])

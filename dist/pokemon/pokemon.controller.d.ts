@@ -1,6 +1,6 @@
 import { FastifyReply } from 'fastify';
 import { CreatePokemonDTO } from './dto/pokemon.dto';
-import { PokemonService } from "./pokemon.service";
+import { PokemonService } from './pokemon.service';
 export declare class PokemonController {
     private pokemonService;
     constructor(pokemonService: PokemonService);

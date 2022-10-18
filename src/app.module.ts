@@ -6,7 +6,11 @@ import { PokemonModule } from './pokemon/pokemon.module';
 import { TrainerModule } from './trainer/trainer.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/nest'), PokemonModule, TrainerModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost/nest'),
+    PokemonModule,
+    TrainerModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

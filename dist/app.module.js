@@ -17,7 +17,11 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [mongoose_1.MongooseModule.forRoot('mongodb://localhost/nest'), pokemon_module_1.PokemonModule, trainer_module_1.TrainerModule],
+        imports: [
+            mongoose_1.MongooseModule.forRoot('mongodb://localhost/nest'),
+            pokemon_module_1.PokemonModule,
+            trainer_module_1.TrainerModule,
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

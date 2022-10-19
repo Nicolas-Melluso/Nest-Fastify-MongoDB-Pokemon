@@ -1,4 +1,4 @@
-import { Document } from "mongoose";
+import { Document } from 'mongoose';
 export interface Pokemon extends Document {
     readonly pokedexNumber: number;
     readonly name: string;

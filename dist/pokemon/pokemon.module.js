@@ -17,12 +17,10 @@ let PokemonModule = class PokemonModule {
 PokemonModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            mongoose_1.MongooseModule.forFeature([
-                { name: 'Pokemon', schema: pokemon_schema_1.PokemonSchema }
-            ])
+            mongoose_1.MongooseModule.forFeature([{ name: 'Pokemon', schema: pokemon_schema_1.PokemonSchema }]),
         ],
         controllers: [pokemon_controller_1.PokemonController],
-        providers: [pokemon_service_1.PokemonService]
+        providers: [pokemon_service_1.PokemonService],
     })
 ], PokemonModule);
 exports.PokemonModule = PokemonModule;

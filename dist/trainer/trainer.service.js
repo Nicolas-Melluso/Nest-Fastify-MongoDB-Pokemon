@@ -59,7 +59,9 @@ let TrainerService = class TrainerService {
         return { winrate, pokemon };
     }
     async tryCatchPokemonByPokedexID(trainerID, pokedexID) {
-        const pokemon = await this.pokemonModel.findOne({ pokedexNumber: pokedexID });
+        const pokemon = await this.pokemonModel.findOne({
+            pokedexNumber: pokedexID,
+        });
         const winrate = await (0, helper_1.randomValue)(1, 100);
         const trainer = await this.trainerModel.findById(trainerID);
         if (winrate > 80) {
@@ -80,7 +82,9 @@ let TrainerService = class TrainerService {
         let pokemon = null;
         while (pokemon === null) {
             const randomNumber = await (0, helper_1.randomValue)(1, 151);
-            pokemon = await this.pokemonModel.findOne({ pokedexNumber: randomNumber });
+            pokemon = await this.pokemonModel.findOne({
+                pokedexNumber: randomNumber,
+            });
         }
         return pokemon;
     }

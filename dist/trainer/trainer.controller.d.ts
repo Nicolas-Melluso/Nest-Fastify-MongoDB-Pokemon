@@ -1,6 +1,6 @@
 import { FastifyReply } from 'fastify';
 import { CreateTrainerDTO } from './dto/trainer.dto';
-import { TrainerService } from "./trainer.service";
+import { TrainerService } from './trainer.service';
 export declare class TrainerController {
     private trainerService;
     constructor(trainerService: TrainerService);

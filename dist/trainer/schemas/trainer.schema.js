@@ -10,6 +10,6 @@ exports.TrainerSchema = new mongoose_1.Schema({
     createdAt: {
         type: Date,
         default: Date.now,
-    }
+    },
 });
 //# sourceMappingURL=trainer.schema.js.map

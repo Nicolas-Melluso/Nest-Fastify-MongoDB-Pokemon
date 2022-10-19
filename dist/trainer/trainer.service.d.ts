@@ -1,6 +1,6 @@
-import { Model } from "mongoose";
-import { Trainer } from "./interfaces/trainer.interface";
-import { CreateTrainerDTO } from "./dto/trainer.dto";
+import { Model } from 'mongoose';
+import { Trainer } from './interfaces/trainer.interface';
+import { CreateTrainerDTO } from './dto/trainer.dto';
 import { Pokemon } from 'src/pokemon/interfaces/pokemon.interface';
 export declare class TrainerService {
     private readonly trainerModel;

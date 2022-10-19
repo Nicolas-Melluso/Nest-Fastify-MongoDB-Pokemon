@@ -1,6 +1,6 @@
-import { Model } from "mongoose";
-import { Pokemon } from "./interfaces/pokemon.interface";
-import { CreatePokemonDTO } from "./dto/pokemon.dto";
+import { Model } from 'mongoose';
+import { Pokemon } from './interfaces/pokemon.interface';
+import { CreatePokemonDTO } from './dto/pokemon.dto';
 export declare class PokemonService {
     private readonly pokemonModel;
     constructor(pokemonModel: Model<Pokemon>);

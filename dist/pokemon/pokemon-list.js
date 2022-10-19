@@ -4,1279 +4,910 @@ exports.allPokemon = void 0;
 const pokemon_types_1 = require("./pokemon-types");
 exports.allPokemon = [
     {
-        name: "Bulbasaur",
+        name: 'Bulbasaur',
         levelRate: [1, 15],
         pokedexId: 1,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Ivysaur",
+        name: 'Ivysaur',
         levelRate: [15, 35],
         pokedexId: 2,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Venusaur",
+        name: 'Venusaur',
         levelRate: [35, 100],
         pokedexId: 3,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Charmander",
+        name: 'Charmander',
         levelRate: [1, 15],
         pokedexId: 4,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Charmeleon",
+        name: 'Charmeleon',
         levelRate: [15, 35],
         pokedexId: 5,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Charizard",
+        name: 'Charizard',
         levelRate: [35, 100],
         pokedexId: 6,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Squirtle",
+        name: 'Squirtle',
         levelRate: [1, 15],
         pokedexId: 7,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Wartortle",
+        name: 'Wartortle',
         levelRate: [15, 35],
         pokedexId: 8,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Blastoise",
+        name: 'Blastoise',
         levelRate: [35, 100],
         pokedexId: 9,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Caterpie",
+        name: 'Caterpie',
         levelRate: [1, 15],
         pokedexId: 10,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG],
     },
     {
-        name: "Metapod",
+        name: 'Metapod',
         levelRate: [15, 35],
         pokedexId: 11,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG],
     },
     {
-        name: "Butterfree",
+        name: 'Butterfree',
         levelRate: [35, 100],
         pokedexId: 12,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Weedle",
+        name: 'Weedle',
         levelRate: [1, 15],
         pokedexId: 13,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Kakuna",
+        name: 'Kakuna',
         levelRate: [15, 35],
         pokedexId: 14,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Beedrill",
+        name: 'Beedrill',
         levelRate: [35, 100],
         pokedexId: 15,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Pidgey",
+        name: 'Pidgey',
         levelRate: [1, 15],
         pokedexId: 16,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Pidgeotto",
+        name: 'Pidgeotto',
         levelRate: [15, 35],
         pokedexId: 17,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Pidgeot",
+        name: 'Pidgeot',
         levelRate: [35, 100],
         pokedexId: 18,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Rattata",
+        name: 'Rattata',
         levelRate: [1, 15],
         pokedexId: 19,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Raticate",
+        name: 'Raticate',
         levelRate: [16, 100],
         pokedexId: 20,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Spearow",
+        name: 'Spearow',
         levelRate: [1, 15],
         pokedexId: 21,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Fearow",
+        name: 'Fearow',
         levelRate: [16, 100],
         pokedexId: 22,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Ekans",
+        name: 'Ekans',
         levelRate: [1, 15],
         pokedexId: 23,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Arbok",
+        name: 'Arbok',
         levelRate: [16, 100],
         pokedexId: 24,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Pikachu",
+        name: 'Pikachu',
         levelRate: [1, 15],
         pokedexId: 25,
-        elements: [
-            pokemon_types_1.pokemonTypes.ELECTRIC,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ELECTRIC],
     },
     {
-        name: "Raichu",
+        name: 'Raichu',
         levelRate: [16, 100],
         pokedexId: 26,
-        elements: [
-            pokemon_types_1.pokemonTypes.ELECTRIC,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ELECTRIC],
     },
     {
-        name: "Sandshrew",
+        name: 'Sandshrew',
         levelRate: [1, 15],
         pokedexId: 27,
-        elements: [
-            pokemon_types_1.pokemonTypes.GROUND,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Sandslash",
+        name: 'Sandslash',
         levelRate: [16, 100],
         pokedexId: 28,
-        elements: [
-            pokemon_types_1.pokemonTypes.GROUND,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Nidoran♀",
+        name: 'Nidoran♀',
         levelRate: [1, 15],
         pokedexId: 29,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Nidorina",
+        name: 'Nidorina',
         levelRate: [15, 35],
         pokedexId: 30,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Nidoqueen",
+        name: 'Nidoqueen',
         levelRate: [35, 100],
         pokedexId: 31,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON, pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Nidoran♂",
+        name: 'Nidoran♂',
         levelRate: [1, 15],
         pokedexId: 32,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Nidorino",
+        name: 'Nidorino',
         levelRate: [15, 35],
         pokedexId: 33,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Nidoking",
+        name: 'Nidoking',
         levelRate: [35, 100],
         pokedexId: 34,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON, pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Clefairy",
+        name: 'Clefairy',
         levelRate: [1, 15],
         pokedexId: 35,
-        elements: [
-            pokemon_types_1.pokemonTypes.FAIRY,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FAIRY],
     },
     {
-        name: "Clefable",
+        name: 'Clefable',
         levelRate: [15, 100],
         pokedexId: 36,
-        elements: [
-            pokemon_types_1.pokemonTypes.FAIRY,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FAIRY],
     },
     {
-        name: "Vulpix",
+        name: 'Vulpix',
         levelRate: [1, 15],
         pokedexId: 37,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Ninetales",
+        name: 'Ninetales',
         levelRate: [16, 100],
         pokedexId: 38,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Jigglypuff",
+        name: 'Jigglypuff',
         levelRate: [1, 15],
         pokedexId: 39,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FAIRY
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FAIRY],
     },
     {
-        name: "Wigglytuff",
+        name: 'Wigglytuff',
         levelRate: [16, 100],
         pokedexId: 40,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FAIRY
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FAIRY],
     },
     {
-        name: "Zubat",
+        name: 'Zubat',
         levelRate: [1, 15],
         pokedexId: 41,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Golbat",
+        name: 'Golbat',
         levelRate: [16, 100],
         pokedexId: 42,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Oddish",
+        name: 'Oddish',
         levelRate: [1, 15],
         pokedexId: 43,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Gloom",
+        name: 'Gloom',
         levelRate: [15, 35],
         pokedexId: 44,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Vileplume",
+        name: 'Vileplume',
         levelRate: [36, 100],
         pokedexId: 45,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Paras",
+        name: 'Paras',
         levelRate: [1, 15],
         pokedexId: 46,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-            pokemon_types_1.pokemonTypes.POISON
-        ]
+        elements: [pokemon_types_1.pokemonTypes.BUG, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Parasect",
+        name: 'Parasect',
         levelRate: [16, 100],
         pokedexId: 47,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-            pokemon_types_1.pokemonTypes.POISON
-        ]
+        elements: [pokemon_types_1.pokemonTypes.BUG, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Venonat",
+        name: 'Venonat',
         levelRate: [1, 15],
         pokedexId: 48,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Venomoth",
+        name: 'Venomoth',
         levelRate: [16, 100],
         pokedexId: 49,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Diglett",
+        name: 'Diglett',
         levelRate: [1, 15],
         pokedexId: 50,
-        elements: [
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Dugtrio",
+        name: 'Dugtrio',
         levelRate: [16, 100],
         pokedexId: 51,
-        elements: [
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Meowth",
+        name: 'Meowth',
         levelRate: [1, 15],
         pokedexId: 52,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Persian",
+        name: 'Persian',
         levelRate: [16, 100],
         pokedexId: 53,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Psyduck",
+        name: 'Psyduck',
         levelRate: [1, 15],
         pokedexId: 54,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Golduck",
+        name: 'Golduck',
         levelRate: [16, 100],
         pokedexId: 55,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Mankey",
+        name: 'Mankey',
         levelRate: [1, 15],
         pokedexId: 56,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIGHTING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIGHTING],
     },
     {
-        name: "Primeape",
+        name: 'Primeape',
         levelRate: [16, 100],
         pokedexId: 57,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIGHTING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIGHTING],
     },
     {
-        name: "Growlithe",
+        name: 'Growlithe',
         levelRate: [1, 15],
         pokedexId: 58,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Arcanine",
+        name: 'Arcanine',
         levelRate: [16, 100],
         pokedexId: 59,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Poliwag",
+        name: 'Poliwag',
         levelRate: [1, 15],
         pokedexId: 60,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Poliwhirl",
+        name: 'Poliwhirl',
         levelRate: [15, 35],
         pokedexId: 61,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Poliwrath",
+        name: 'Poliwrath',
         levelRate: [36, 100],
         pokedexId: 62,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.FIGHTING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.FIGHTING],
     },
     {
-        name: "Abra",
+        name: 'Abra',
         levelRate: [1, 15],
         pokedexId: 63,
-        elements: [
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Kadabra",
+        name: 'Kadabra',
         levelRate: [15, 35],
         pokedexId: 64,
-        elements: [
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Alakazam",
+        name: 'Alakazam',
         levelRate: [36, 100],
         pokedexId: 65,
-        elements: [
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Machop",
+        name: 'Machop',
         levelRate: [1, 15],
         pokedexId: 66,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIGHTING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIGHTING],
     },
     {
-        name: "Machoke",
+        name: 'Machoke',
         levelRate: [15, 35],
         pokedexId: 67,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIGHTING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIGHTING],
     },
     {
-        name: "Machamp",
+        name: 'Machamp',
         levelRate: [36, 100],
         pokedexId: 68,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIGHTING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIGHTING],
     },
     {
-        name: "Bellsprout",
+        name: 'Bellsprout',
         levelRate: [1, 15],
         pokedexId: 69,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Weepinbell",
+        name: 'Weepinbell',
         levelRate: [15, 35],
         pokedexId: 70,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Victreebel",
+        name: 'Victreebel',
         levelRate: [36, 100],
         pokedexId: 71,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Tentacool",
+        name: 'Tentacool',
         levelRate: [1, 15],
         pokedexId: 72,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Tentacruel",
+        name: 'Tentacruel',
         levelRate: [16, 100],
         pokedexId: 73,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Geodude",
+        name: 'Geodude',
         levelRate: [1, 15],
         pokedexId: 74,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Graveler",
+        name: 'Graveler',
         levelRate: [15, 35],
         pokedexId: 75,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Golem",
+        name: 'Golem',
         levelRate: [36, 100],
         pokedexId: 76,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Ponyta",
+        name: 'Ponyta',
         levelRate: [1, 15],
         pokedexId: 77,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Rapidash",
+        name: 'Rapidash',
         levelRate: [16, 100],
         pokedexId: 78,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Slowpoke",
+        name: 'Slowpoke',
         levelRate: [1, 15],
         pokedexId: 79,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Slowbro",
+        name: 'Slowbro',
         levelRate: [16, 100],
         pokedexId: 80,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Magnemite",
+        name: 'Magnemite',
         levelRate: [1, 15],
         pokedexId: 81,
-        elements: [
-            pokemon_types_1.pokemonTypes.ELECTRIC,
-            pokemon_types_1.pokemonTypes.STEEL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ELECTRIC, pokemon_types_1.pokemonTypes.STEEL],
     },
     {
-        name: "Magneton",
+        name: 'Magneton',
         levelRate: [16, 100],
         pokedexId: 82,
-        elements: [
-            pokemon_types_1.pokemonTypes.ELECTRIC,
-            pokemon_types_1.pokemonTypes.STEEL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ELECTRIC, pokemon_types_1.pokemonTypes.STEEL],
     },
     {
         name: "Farfetch'd",
         levelRate: [0, 66],
         pokedexId: 83,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Doduo",
+        name: 'Doduo',
         levelRate: [1, 15],
         pokedexId: 84,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Dodrio",
+        name: 'Dodrio',
         levelRate: [16, 100],
         pokedexId: 85,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Seel",
+        name: 'Seel',
         levelRate: [1, 15],
         pokedexId: 86,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Dewgong",
+        name: 'Dewgong',
         levelRate: [16, 100],
         pokedexId: 87,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.ICE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.ICE],
     },
     {
-        name: "Grimer",
+        name: 'Grimer',
         levelRate: [1, 15],
         pokedexId: 88,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Muk",
+        name: 'Muk',
         levelRate: [16, 100],
         pokedexId: 89,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Shellder",
+        name: 'Shellder',
         levelRate: [1, 15],
         pokedexId: 90,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Cloyster",
+        name: 'Cloyster',
         levelRate: [16, 100],
         pokedexId: 91,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.ICE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.ICE],
     },
     {
-        name: "Gastly",
+        name: 'Gastly',
         levelRate: [1, 15],
         pokedexId: 92,
-        elements: [
-            pokemon_types_1.pokemonTypes.GHOST,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GHOST, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Haunter",
+        name: 'Haunter',
         levelRate: [15, 35],
         pokedexId: 93,
-        elements: [
-            pokemon_types_1.pokemonTypes.GHOST,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GHOST, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Gengar",
+        name: 'Gengar',
         levelRate: [36, 100],
         pokedexId: 94,
-        elements: [
-            pokemon_types_1.pokemonTypes.GHOST,
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GHOST, pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Onix",
+        name: 'Onix',
         levelRate: [18, 66],
         pokedexId: 95,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Drowzee",
+        name: 'Drowzee',
         levelRate: [1, 15],
         pokedexId: 96,
-        elements: [
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Hypno",
+        name: 'Hypno',
         levelRate: [16, 100],
         pokedexId: 97,
-        elements: [
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Krabby",
+        name: 'Krabby',
         levelRate: [1, 15],
         pokedexId: 98,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Kingler",
+        name: 'Kingler',
         levelRate: [16, 100],
         pokedexId: 99,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Voltorb",
+        name: 'Voltorb',
         levelRate: [1, 15],
         pokedexId: 100,
-        elements: [
-            pokemon_types_1.pokemonTypes.ELECTRIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ELECTRIC],
     },
     {
-        name: "Electrode",
+        name: 'Electrode',
         levelRate: [16, 100],
         pokedexId: 101,
-        elements: [
-            pokemon_types_1.pokemonTypes.ELECTRIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ELECTRIC],
     },
     {
-        name: "Exeggcute",
+        name: 'Exeggcute',
         levelRate: [1, 15],
         pokedexId: 102,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Exeggutor",
+        name: 'Exeggutor',
         levelRate: [16, 100],
         pokedexId: 103,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS,
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS, pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Cubone",
+        name: 'Cubone',
         levelRate: [1, 15],
         pokedexId: 104,
-        elements: [
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Marowak",
+        name: 'Marowak',
         levelRate: [16, 100],
         pokedexId: 105,
-        elements: [
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Hitmonlee",
+        name: 'Hitmonlee',
         levelRate: [5, 66],
         pokedexId: 106,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIGHTING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIGHTING],
     },
     {
-        name: "Hitmonchan",
+        name: 'Hitmonchan',
         levelRate: [5, 66],
         pokedexId: 107,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIGHTING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIGHTING],
     },
     {
-        name: "Lickitung",
+        name: 'Lickitung',
         levelRate: [5, 66],
         pokedexId: 108,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Koffing",
+        name: 'Koffing',
         levelRate: [1, 15],
         pokedexId: 109,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Weezing",
+        name: 'Weezing',
         levelRate: [16, 100],
         pokedexId: 110,
-        elements: [
-            pokemon_types_1.pokemonTypes.POISON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.POISON],
     },
     {
-        name: "Rhyhorn",
+        name: 'Rhyhorn',
         levelRate: [1, 15],
         pokedexId: 111,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Rhydon",
+        name: 'Rhydon',
         levelRate: [16, 100],
         pokedexId: 112,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.GROUND
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.GROUND],
     },
     {
-        name: "Chansey",
+        name: 'Chansey',
         levelRate: [5, 66],
         pokedexId: 113,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Tangela",
+        name: 'Tangela',
         levelRate: [5, 66],
         pokedexId: 114,
-        elements: [
-            pokemon_types_1.pokemonTypes.GRASS
-        ],
+        elements: [pokemon_types_1.pokemonTypes.GRASS],
     },
     {
-        name: "Kangaskhan",
+        name: 'Kangaskhan',
         levelRate: [5, 66],
         pokedexId: 115,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Horsea",
+        name: 'Horsea',
         levelRate: [1, 15],
         pokedexId: 116,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Seadra",
+        name: 'Seadra',
         levelRate: [16, 100],
         pokedexId: 117,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Goldeen",
+        name: 'Goldeen',
         levelRate: [1, 15],
         pokedexId: 118,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Seaking",
+        name: 'Seaking',
         levelRate: [16, 100],
         pokedexId: 119,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Staryu",
+        name: 'Staryu',
         levelRate: [1, 15],
         pokedexId: 120,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Starmie",
+        name: 'Starmie',
         levelRate: [16, 100],
         pokedexId: 121,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Mr. Mime",
+        name: 'Mr. Mime',
         levelRate: [5, 66],
         pokedexId: 122,
-        elements: [
-            pokemon_types_1.pokemonTypes.PSYCHIC,
-            pokemon_types_1.pokemonTypes.FAIRY
-        ],
+        elements: [pokemon_types_1.pokemonTypes.PSYCHIC, pokemon_types_1.pokemonTypes.FAIRY],
     },
     {
-        name: "Scyther",
+        name: 'Scyther',
         levelRate: [5, 66],
         pokedexId: 123,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Jynx",
+        name: 'Jynx',
         levelRate: [5, 66],
         pokedexId: 124,
-        elements: [
-            pokemon_types_1.pokemonTypes.ICE,
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ICE, pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Electabuzz",
+        name: 'Electabuzz',
         levelRate: [5, 66],
         pokedexId: 125,
-        elements: [
-            pokemon_types_1.pokemonTypes.ELECTRIC,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ELECTRIC],
     },
     {
-        name: "Magmar",
+        name: 'Magmar',
         levelRate: [5, 66],
         pokedexId: 126,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Pinsir",
+        name: 'Pinsir',
         levelRate: [5, 66],
         pokedexId: 127,
-        elements: [
-            pokemon_types_1.pokemonTypes.BUG,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.BUG],
     },
     {
-        name: "Tauros",
+        name: 'Tauros',
         levelRate: [5, 66],
         pokedexId: 128,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Magikarp",
+        name: 'Magikarp',
         levelRate: [1, 5],
         pokedexId: 129,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Gyarados",
+        name: 'Gyarados',
         levelRate: [32, 100],
         pokedexId: 130,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Lapras",
+        name: 'Lapras',
         levelRate: [32, 66],
         pokedexId: 131,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER,
-            pokemon_types_1.pokemonTypes.ICE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER, pokemon_types_1.pokemonTypes.ICE],
     },
     {
-        name: "Ditto",
+        name: 'Ditto',
         levelRate: [1, 100],
         pokedexId: 132,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Eevee",
+        name: 'Eevee',
         levelRate: [5, 12],
         pokedexId: 133,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Vaporeon",
+        name: 'Vaporeon',
         levelRate: [16, 100],
         pokedexId: 134,
-        elements: [
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Jolteon",
+        name: 'Jolteon',
         levelRate: [16, 100],
         pokedexId: 135,
-        elements: [
-            pokemon_types_1.pokemonTypes.ELECTRIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ELECTRIC],
     },
     {
-        name: "Flareon",
+        name: 'Flareon',
         levelRate: [16, 100],
         pokedexId: 136,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE],
     },
     {
-        name: "Porygon",
+        name: 'Porygon',
         levelRate: [1, 25],
         pokedexId: 137,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Omanyte",
+        name: 'Omanyte',
         levelRate: [1, 16],
         pokedexId: 138,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Omastar",
+        name: 'Omastar',
         levelRate: [40, 100],
         pokedexId: 139,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Kabuto",
+        name: 'Kabuto',
         levelRate: [1, 15],
         pokedexId: 140,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Kabutops",
+        name: 'Kabutops',
         levelRate: [20, 100],
         pokedexId: 141,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.WATER
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.WATER],
     },
     {
-        name: "Aerodactyl",
+        name: 'Aerodactyl',
         levelRate: [20, 100],
         pokedexId: 142,
-        elements: [
-            pokemon_types_1.pokemonTypes.ROCK,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ROCK, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Snorlax",
+        name: 'Snorlax',
         levelRate: [25, 100],
         pokedexId: 143,
-        elements: [
-            pokemon_types_1.pokemonTypes.NORMAL
-        ],
+        elements: [pokemon_types_1.pokemonTypes.NORMAL],
     },
     {
-        name: "Articuno",
+        name: 'Articuno',
         levelRate: [100, 100],
         pokedexId: 144,
-        elements: [
-            pokemon_types_1.pokemonTypes.ICE,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ICE, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Zapdos",
+        name: 'Zapdos',
         levelRate: [100, 100],
         pokedexId: 145,
-        elements: [
-            pokemon_types_1.pokemonTypes.ELECTRIC,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.ELECTRIC, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Moltres",
+        name: 'Moltres',
         levelRate: [100, 100],
         pokedexId: 146,
-        elements: [
-            pokemon_types_1.pokemonTypes.FIRE,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.FIRE, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Dratini",
+        name: 'Dratini',
         levelRate: [1, 15],
         pokedexId: 147,
-        elements: [
-            pokemon_types_1.pokemonTypes.DRAGON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.DRAGON],
     },
     {
-        name: "Dragonair",
+        name: 'Dragonair',
         levelRate: [15, 35],
         pokedexId: 148,
-        elements: [
-            pokemon_types_1.pokemonTypes.DRAGON
-        ],
+        elements: [pokemon_types_1.pokemonTypes.DRAGON],
     },
     {
-        name: "Dragonite",
+        name: 'Dragonite',
         levelRate: [36, 100],
         pokedexId: 149,
-        elements: [
-            pokemon_types_1.pokemonTypes.DRAGON,
-            pokemon_types_1.pokemonTypes.FLYING
-        ],
+        elements: [pokemon_types_1.pokemonTypes.DRAGON, pokemon_types_1.pokemonTypes.FLYING],
     },
     {
-        name: "Mewtwo",
+        name: 'Mewtwo',
         levelRate: [100, 100],
         pokedexId: 150,
-        elements: [
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.PSYCHIC],
     },
     {
-        name: "Mew",
+        name: 'Mew',
         levelRate: [100, 100],
         pokedexId: 151,
-        elements: [
-            pokemon_types_1.pokemonTypes.PSYCHIC
-        ],
+        elements: [pokemon_types_1.pokemonTypes.PSYCHIC],
     },
 ];
 //# sourceMappingURL=pokemon-list.js.map

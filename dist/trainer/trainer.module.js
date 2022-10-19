@@ -20,11 +20,11 @@ TrainerModule = __decorate([
         imports: [
             mongoose_1.MongooseModule.forFeature([
                 { name: 'Trainer', schema: trainer_schema_1.TrainerSchema },
-                { name: 'Pokemon', schema: pokemon_schema_1.PokemonSchema }
-            ])
+                { name: 'Pokemon', schema: pokemon_schema_1.PokemonSchema },
+            ]),
         ],
         controllers: [trainer_controller_1.TrainerController],
-        providers: [trainer_service_1.TrainerService]
+        providers: [trainer_service_1.TrainerService],
     })
 ], TrainerModule);
 exports.TrainerModule = TrainerModule;

@@ -12,6 +12,7 @@ import {
   Query,
 } from '@nestjs/common';
 import { FastifyReply } from 'fastify';
+import { PokemonGenerateDTO } from './dto/pokemon-generate.dto';
 import { CreatePokemonDTO } from './dto/pokemon.dto';
 import { PokemonService } from './pokemon.service';
 
@@ -91,22 +92,14 @@ export class PokemonController {
   }
 
   @Post('/generate/all')
-  async generatePokemons(@Res() res: FastifyReply) {
-    const listPokemon = await this.pokemonService.generateAllPokemons();
-
-    res.status(HttpStatus.OK).send({
-      message: `This was the all pokemon that were created`,
-      pokemonsCreated: listPokemon,
-    });
-  }
-
-  @Post('/generate/:number')
-  async generateNumberOfPokemons(
+  async generatePokemons(
     @Res() res: FastifyReply,
-    @Param('number') number,
+    @Body() pokemonGenerate: PokemonGenerateDTO,
   ) {
-    const listPokemon = await this.pokemonService.generateNumberOfPokemons(
-      number,
+    const listPokemon = await this.pokemonService.generatePokemons(
+      pokemonGenerate.pokedexID,
+      pokemonGenerate.quantity,
+      pokemonGenerate.generateAll,
     );
 
     res.status(HttpStatus.OK).send({

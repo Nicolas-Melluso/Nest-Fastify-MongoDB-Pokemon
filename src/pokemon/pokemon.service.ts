@@ -44,43 +44,23 @@ export class PokemonService {
     return updatedPokemon;
   }
 
-  async generateAllPokemons(): Promise<Array<Pokemon>> {
+  async generatePokemons(
+    pokedexID: number,
+    quantity: number,
+    generateAll = true,
+  ): Promise<Array<Pokemon>> {
     const pokemonList = [];
-    for (let i = 0; i < allPokemon.length; i++) {
-      const pokemon = allPokemon[i];
-      const pokemonLevel = await randomValue(
-        pokemon.levelRate[0],
-        pokemon.levelRate[1],
-      );
-      const experienceLevel = pokemonLevel * 1000 + (await randomValue(0, 999));
-      const gender = await randomValue(0, 1);
-      const createPokemonDTO = {
-        pokedexNumber: pokemon.pokedexId,
-        name: pokemon.name,
-        level: pokemonLevel,
-        experience: experienceLevel,
-        gender: gender ? 'Male' : 'Female',
-        elements: pokemon.elements,
-        imageUrl: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${
-          pokemon.pokedexId < 100
-            ? pokemon.pokedexId < 10
-              ? '00' + pokemon.pokedexId
-              : '0' + pokemon.pokedexId
-            : pokemon.pokedexId
-        }.png`,
-      };
 
-      const newPokemon = await new this.pokemonModel(createPokemonDTO);
-      pokemonList.push(newPokemon);
-      await newPokemon.save();
-    }
-    return pokemonList;
-  }
+    quantity = generateAll ? allPokemon.length : 1;
 
-  async generateNumberOfPokemons(number = 1): Promise<Array<Pokemon>> {
-    const pokemonList = [];
-    for (let i = 0; i <= number; i++) {
-      const pokedexID = await randomValue(1, 151);
+    for (let i = 0; i < quantity; i++) {
+      if (generateAll) {
+        pokedexID = i;
+      } else if (!pokedexID) {
+        pokedexID = await randomValue(1, 151);
+      }
+      console.log(pokedexID);
+
       const pokemon = allPokemon[pokedexID];
       const pokemonLevel = await randomValue(
         pokemon.levelRate[0],

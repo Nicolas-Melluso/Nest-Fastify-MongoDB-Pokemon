@@ -42,36 +42,17 @@ let PokemonService = class PokemonService {
         const updatedPokemon = await this.pokemonModel.findByIdAndUpdate(pokemonID, createPokemonDTO, { new: true });
         return updatedPokemon;
     }
-    async generateAllPokemons() {
+    async generatePokemons(pokedexID, quantity, generateAll = true) {
         const pokemonList = [];
-        for (let i = 0; i < pokemon_list_1.allPokemon.length; i++) {
-            const pokemon = pokemon_list_1.allPokemon[i];
-            const pokemonLevel = await (0, helper_1.randomValue)(pokemon.levelRate[0], pokemon.levelRate[1]);
-            const experienceLevel = pokemonLevel * 1000 + (await (0, helper_1.randomValue)(0, 999));
-            const gender = await (0, helper_1.randomValue)(0, 1);
-            const createPokemonDTO = {
-                pokedexNumber: pokemon.pokedexId,
-                name: pokemon.name,
-                level: pokemonLevel,
-                experience: experienceLevel,
-                gender: gender ? 'Male' : 'Female',
-                elements: pokemon.elements,
-                imageUrl: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.pokedexId < 100
-                    ? pokemon.pokedexId < 10
-                        ? '00' + pokemon.pokedexId
-                        : '0' + pokemon.pokedexId
-                    : pokemon.pokedexId}.png`,
-            };
-            const newPokemon = await new this.pokemonModel(createPokemonDTO);
-            pokemonList.push(newPokemon);
-            await newPokemon.save();
-        }
-        return pokemonList;
-    }
-    async generateNumberOfPokemons(number = 1) {
-        const pokemonList = [];
-        for (let i = 0; i <= number; i++) {
-            const pokedexID = await (0, helper_1.randomValue)(1, 151);
+        quantity = generateAll ? pokemon_list_1.allPokemon.length : 1;
+        for (let i = 0; i < quantity; i++) {
+            if (generateAll) {
+                pokedexID = i;
+            }
+            else if (!pokedexID) {
+                pokedexID = await (0, helper_1.randomValue)(1, 151);
+            }
+            console.log(pokedexID);
             const pokemon = pokemon_list_1.allPokemon[pokedexID];
             const pokemonLevel = await (0, helper_1.randomValue)(pokemon.levelRate[0], pokemon.levelRate[1]);
             const experienceLevel = pokemonLevel * 1000 + (await (0, helper_1.randomValue)(0, 999));

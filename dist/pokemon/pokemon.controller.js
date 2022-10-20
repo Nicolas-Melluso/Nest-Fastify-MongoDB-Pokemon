@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PokemonController = void 0;
 const common_1 = require("@nestjs/common");
+const pokemon_generate_dto_1 = require("./dto/pokemon-generate.dto");
 const pokemon_dto_1 = require("./dto/pokemon.dto");
 const pokemon_service_1 = require("./pokemon.service");
 let PokemonController = class PokemonController {
@@ -65,15 +66,8 @@ let PokemonController = class PokemonController {
             pokemon,
         });
     }
-    async generatePokemons(res) {
-        const listPokemon = await this.pokemonService.generateAllPokemons();
-        res.status(common_1.HttpStatus.OK).send({
-            message: `This was the all pokemon that were created`,
-            pokemonsCreated: listPokemon,
-        });
-    }
-    async generateNumberOfPokemons(res, number) {
-        const listPokemon = await this.pokemonService.generateNumberOfPokemons(number);
+    async generatePokemons(res, pokemonGenerate) {
+        const listPokemon = await this.pokemonService.generatePokemons(pokemonGenerate.pokedexID, pokemonGenerate.quantity, pokemonGenerate.generateAll);
         res.status(common_1.HttpStatus.OK).send({
             message: `This was the all pokemon that were created`,
             pokemonsCreated: listPokemon,
@@ -123,18 +117,11 @@ __decorate([
 __decorate([
     (0, common_1.Post)('/generate/all'),
     __param(0, (0, common_1.Res)()),
+    __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [Object, pokemon_generate_dto_1.PokemonGenerateDTO]),
     __metadata("design:returntype", Promise)
 ], PokemonController.prototype, "generatePokemons", null);
-__decorate([
-    (0, common_1.Post)('/generate/:number'),
-    __param(0, (0, common_1.Res)()),
-    __param(1, (0, common_1.Param)('number')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", Promise)
-], PokemonController.prototype, "generateNumberOfPokemons", null);
 PokemonController = __decorate([
     (0, common_1.Controller)('pokemon'),
     __metadata("design:paramtypes", [pokemon_service_1.PokemonService])

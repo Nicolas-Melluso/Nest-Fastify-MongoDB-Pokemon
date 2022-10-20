@@ -1,4 +1,5 @@
 import { FastifyReply } from 'fastify';
+import { PokemonGenerateDTO } from './dto/pokemon-generate.dto';
 import { CreatePokemonDTO } from './dto/pokemon.dto';
 import { PokemonService } from './pokemon.service';
 export declare class PokemonController {
@@ -9,6 +10,5 @@ export declare class PokemonController {
     getPokemonById(res: FastifyReply, pokemonID: any): Promise<void>;
     deletePokemon(res: FastifyReply, pokemonID: any): Promise<void>;
     updatePokemon(res: FastifyReply, createPokemonDTO: CreatePokemonDTO, pokemonID: any): Promise<void>;
-    generatePokemons(res: FastifyReply): Promise<void>;
-    generateNumberOfPokemons(res: FastifyReply, number: any): Promise<void>;
+    generatePokemons(res: FastifyReply, pokemonGenerate: PokemonGenerateDTO): Promise<void>;
 }

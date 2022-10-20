@@ -9,6 +9,5 @@ export declare class PokemonService {
     createPokemon(createPokemonDTO: CreatePokemonDTO): Promise<Pokemon>;
     deletePokemon(pokemonID: string): Promise<Pokemon>;
     updatePokemon(pokemonID: string, createPokemonDTO: CreatePokemonDTO): Promise<Pokemon>;
-    generateAllPokemons(): Promise<Array<Pokemon>>;
-    generateNumberOfPokemons(number?: number): Promise<Array<Pokemon>>;
+    generatePokemons(pokedexID: number, quantity: number, generateAll?: boolean): Promise<Array<Pokemon>>;
 }

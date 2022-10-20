@@ -43,7 +43,9 @@ let PokemonService = class PokemonService {
         return updatedPokemon;
     }
     async generateAllPokemons() {
-        pokemon_list_1.allPokemon.map(async (pokemon) => {
+        const pokemonList = [];
+        for (let i = 0; i < pokemon_list_1.allPokemon.length; i++) {
+            const pokemon = pokemon_list_1.allPokemon[i];
             const pokemonLevel = await (0, helper_1.randomValue)(pokemon.levelRate[0], pokemon.levelRate[1]);
             const experienceLevel = pokemonLevel * 1000 + (await (0, helper_1.randomValue)(0, 999));
             const gender = await (0, helper_1.randomValue)(0, 1);
@@ -61,8 +63,10 @@ let PokemonService = class PokemonService {
                     : pokemon.pokedexId}.png`,
             };
             const newPokemon = await new this.pokemonModel(createPokemonDTO);
-            return await newPokemon.save();
-        });
+            pokemonList.push(newPokemon);
+            await newPokemon.save();
+        }
+        return pokemonList;
     }
 };
 PokemonService = __decorate([

@@ -66,9 +66,10 @@ let PokemonController = class PokemonController {
         });
     }
     async generatePokemons(res) {
-        await this.pokemonService.generateAllPokemons();
+        const listPokemon = await this.pokemonService.generateAllPokemons();
         res.status(common_1.HttpStatus.OK).send({
             message: `This was the all pokemon that were created`,
+            pokemonsCreated: listPokemon,
         });
     }
 };

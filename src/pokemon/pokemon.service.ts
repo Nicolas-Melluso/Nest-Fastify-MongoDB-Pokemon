@@ -44,15 +44,16 @@ export class PokemonService {
     return updatedPokemon;
   }
 
-  async generateAllPokemons(): Promise<any> {
-    allPokemon.map(async (pokemon) => {
+  async generateAllPokemons(): Promise<Array<Pokemon>> {
+    const pokemonList = [];
+    for (let i = 0; i < allPokemon.length; i++) {
+      const pokemon = allPokemon[i];
       const pokemonLevel = await randomValue(
         pokemon.levelRate[0],
         pokemon.levelRate[1],
       );
       const experienceLevel = pokemonLevel * 1000 + (await randomValue(0, 999));
       const gender = await randomValue(0, 1);
-
       const createPokemonDTO = {
         pokedexNumber: pokemon.pokedexId,
         name: pokemon.name,
@@ -70,7 +71,9 @@ export class PokemonService {
       };
 
       const newPokemon = await new this.pokemonModel(createPokemonDTO);
-      return await newPokemon.save();
-    });
+      pokemonList.push(newPokemon);
+      await newPokemon.save();
+    }
+    return pokemonList;
   }
 }

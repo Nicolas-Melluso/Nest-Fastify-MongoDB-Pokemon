@@ -92,10 +92,11 @@ export class PokemonController {
 
   @Post('/generate/all')
   async generatePokemons(@Res() res: FastifyReply) {
-    await this.pokemonService.generateAllPokemons();
+    const listPokemon = await this.pokemonService.generateAllPokemons();
 
     res.status(HttpStatus.OK).send({
       message: `This was the all pokemon that were created`,
+      pokemonsCreated: listPokemon,
     });
   }
 }

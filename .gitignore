@@ -1,1 +1,5 @@
 node_modules
+
+dist/*
+!/dist/v4
+!/dist/v5

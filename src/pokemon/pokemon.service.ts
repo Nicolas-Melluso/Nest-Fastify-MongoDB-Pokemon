@@ -59,7 +59,6 @@ export class PokemonService {
       } else if (!pokedexID) {
         pokedexID = await randomValue(1, 151);
       }
-      console.log(pokedexID);
 
       const pokemon = allPokemon[pokedexID];
       const pokemonLevel = await randomValue(

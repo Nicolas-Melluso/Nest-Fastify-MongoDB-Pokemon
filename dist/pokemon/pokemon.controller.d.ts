@@ -10,4 +10,5 @@ export declare class PokemonController {
     deletePokemon(res: FastifyReply, pokemonID: any): Promise<void>;
     updatePokemon(res: FastifyReply, createPokemonDTO: CreatePokemonDTO, pokemonID: any): Promise<void>;
     generatePokemons(res: FastifyReply): Promise<void>;
+    generateNumberOfPokemons(res: FastifyReply, number: any): Promise<void>;
 }

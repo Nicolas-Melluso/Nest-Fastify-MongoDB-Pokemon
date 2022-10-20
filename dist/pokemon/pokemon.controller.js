@@ -72,6 +72,13 @@ let PokemonController = class PokemonController {
             pokemonsCreated: listPokemon,
         });
     }
+    async generateNumberOfPokemons(res, number) {
+        const listPokemon = await this.pokemonService.generateNumberOfPokemons(number);
+        res.status(common_1.HttpStatus.OK).send({
+            message: `This was the all pokemon that were created`,
+            pokemonsCreated: listPokemon,
+        });
+    }
 };
 __decorate([
     (0, common_1.Post)('/create'),
@@ -120,6 +127,14 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], PokemonController.prototype, "generatePokemons", null);
+__decorate([
+    (0, common_1.Post)('/generate/:number'),
+    __param(0, (0, common_1.Res)()),
+    __param(1, (0, common_1.Param)('number')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PokemonController.prototype, "generateNumberOfPokemons", null);
 PokemonController = __decorate([
     (0, common_1.Controller)('pokemon'),
     __metadata("design:paramtypes", [pokemon_service_1.PokemonService])

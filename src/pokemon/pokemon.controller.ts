@@ -99,4 +99,19 @@ export class PokemonController {
       pokemonsCreated: listPokemon,
     });
   }
+
+  @Post('/generate/:number')
+  async generateNumberOfPokemons(
+    @Res() res: FastifyReply,
+    @Param('number') number,
+  ) {
+    const listPokemon = await this.pokemonService.generateNumberOfPokemons(
+      number,
+    );
+
+    res.status(HttpStatus.OK).send({
+      message: `This was the all pokemon that were created`,
+      pokemonsCreated: listPokemon,
+    });
+  }
 }

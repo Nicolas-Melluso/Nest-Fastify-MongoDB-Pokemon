@@ -3,7 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { TrainerController } from './trainer.controller';
 import { TrainerService } from './trainer.service';
 import { TrainerSchema } from './schemas/trainer.schema';
-import { PokemonSchema } from 'src/pokemon/schemas/pokemon.schema';
+import { PokemonSchema } from '../pokemon/schemas/pokemon.schema';
 
 @Module({
   imports: [

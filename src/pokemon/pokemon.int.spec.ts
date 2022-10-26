@@ -58,19 +58,24 @@ describe('Nest Pokemon Integration Test', () => {
     describe('GET', () => {
       describe('Get all pokemons', () => {
         it('should return 200 ', async () => {
-          const data = await app.inject({
-            method: 'GET',
-            url: `/pokemon`,
-          });
-          expect(data.statusCode).toEqual(200);
-          expect(data.headers['content-type']).toEqual(
+          const { body, statusCode, headers, statusMessage } = await app.inject(
+            {
+              method: 'GET',
+              url: `/pokemon`,
+            },
+          );
+          expect(statusCode).toEqual(200);
+          expect(headers['content-type']).toEqual(
             'application/json; charset=utf-8',
           );
+          expect(statusMessage).toEqual('OK');
+          expect(JSON.parse(body)).toMatchObject({});
         });
       });
     });
     afterAll(() => {
       mongoose.connection.close();
+      app.close();
     });
   });
 });

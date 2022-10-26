@@ -3,11 +3,15 @@ import { PokemonService } from './pokemon.service';
 
 describe('PokemonService', () => {
   let service: PokemonService;
+  const mockPokemonService = {};
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [PokemonService],
-    }).compile();
+    })
+      .overrideProvider(PokemonService)
+      .useValue(mockPokemonService)
+      .compile();
 
     service = module.get<PokemonService>(PokemonService);
   });

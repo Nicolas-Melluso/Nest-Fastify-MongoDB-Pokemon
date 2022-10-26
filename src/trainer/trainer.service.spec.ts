@@ -4,10 +4,15 @@ import { TrainerService } from './trainer.service';
 describe('TrainerService', () => {
   let service: TrainerService;
 
+  const mockUserRepository = {};
+
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [TrainerService],
-    }).compile();
+    })
+      .overrideProvider(TrainerService)
+      .useValue(mockUserRepository)
+      .compile();
 
     service = module.get<TrainerService>(TrainerService);
   });
